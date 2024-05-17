@@ -15,6 +15,16 @@
 		F981329C2BF74FCF00DB6ED8 /* ServiceHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981328E2BF74E5E00DB6ED8 /* ServiceHelperProtocol.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F987ABD72BF76A060024412B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F98132742BF74E1900DB6ED8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F98132892BF74E5E00DB6ED8;
+			remoteInfo = ServiceHelper;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		F981327A2BF74E1900DB6ED8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -110,6 +120,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F987ABD82BF76A060024412B /* PBXTargetDependency */,
 			);
 			name = traycli;
 			productName = traycli;
@@ -202,6 +213,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F987ABD82BF76A060024412B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F98132892BF74E5E00DB6ED8 /* ServiceHelper */;
+			targetProxy = F987ABD72BF76A060024412B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F98132812BF74E1900DB6ED8 /* Debug */ = {
@@ -326,9 +345,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9S877FWG93;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ServiceHelper/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atcults.traycli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -339,9 +361,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9S877FWG93;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ServiceHelper/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atcults.traycli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
