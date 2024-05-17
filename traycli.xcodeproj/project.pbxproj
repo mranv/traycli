@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F98132802BF74E1900DB6ED8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981327F2BF74E1900DB6ED8 /* main.swift */; };
+		F981328D2BF74E5E00DB6ED8 /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981328C2BF74E5E00DB6ED8 /* ServiceHelper.swift */; };
+		F981328F2BF74E5E00DB6ED8 /* ServiceHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981328E2BF74E5E00DB6ED8 /* ServiceHelperProtocol.swift */; };
+		F98132912BF74E5E00DB6ED8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98132902BF74E5E00DB6ED8 /* main.swift */; };
+		F981329B2BF74F9F00DB6ED8 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98132992BF74F9F00DB6ED8 /* ServiceManager.swift */; };
+		F981329C2BF74FCF00DB6ED8 /* ServiceHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981328E2BF74E5E00DB6ED8 /* ServiceHelperProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +30,24 @@
 /* Begin PBXFileReference section */
 		F981327C2BF74E1900DB6ED8 /* traycli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = traycli; sourceTree = BUILT_PRODUCTS_DIR; };
 		F981327F2BF74E1900DB6ED8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F981328A2BF74E5E00DB6ED8 /* ServiceHelper.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = ServiceHelper.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		F981328C2BF74E5E00DB6ED8 /* ServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
+		F981328E2BF74E5E00DB6ED8 /* ServiceHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelperProtocol.swift; sourceTree = "<group>"; };
+		F98132902BF74E5E00DB6ED8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F98132922BF74E5E00DB6ED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F98132932BF74E5E00DB6ED8 /* ServiceHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ServiceHelper.entitlements; sourceTree = "<group>"; };
+		F98132992BF74F9F00DB6ED8 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F98132792BF74E1900DB6ED8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F98132872BF74E5E00DB6ED8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				F981327E2BF74E1900DB6ED8 /* traycli */,
+				F981328B2BF74E5E00DB6ED8 /* ServiceHelper */,
 				F981327D2BF74E1900DB6ED8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				F981327C2BF74E1900DB6ED8 /* traycli */,
+				F981328A2BF74E5E00DB6ED8 /* ServiceHelper.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +81,19 @@
 				F981327F2BF74E1900DB6ED8 /* main.swift */,
 			);
 			path = traycli;
+			sourceTree = "<group>";
+		};
+		F981328B2BF74E5E00DB6ED8 /* ServiceHelper */ = {
+			isa = PBXGroup;
+			children = (
+				F981328C2BF74E5E00DB6ED8 /* ServiceHelper.swift */,
+				F981328E2BF74E5E00DB6ED8 /* ServiceHelperProtocol.swift */,
+				F98132902BF74E5E00DB6ED8 /* main.swift */,
+				F98132922BF74E5E00DB6ED8 /* Info.plist */,
+				F98132932BF74E5E00DB6ED8 /* ServiceHelper.entitlements */,
+				F98132992BF74F9F00DB6ED8 /* ServiceManager.swift */,
+			);
+			path = ServiceHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +116,23 @@
 			productReference = F981327C2BF74E1900DB6ED8 /* traycli */;
 			productType = "com.apple.product-type.tool";
 		};
+		F98132892BF74E5E00DB6ED8 /* ServiceHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F98132942BF74E5E00DB6ED8 /* Build configuration list for PBXNativeTarget "ServiceHelper" */;
+			buildPhases = (
+				F98132862BF74E5E00DB6ED8 /* Sources */,
+				F98132872BF74E5E00DB6ED8 /* Frameworks */,
+				F98132882BF74E5E00DB6ED8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ServiceHelper;
+			productName = ServiceHelper;
+			productReference = F981328A2BF74E5E00DB6ED8 /* ServiceHelper.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +144,9 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					F981327B2BF74E1900DB6ED8 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					F98132892BF74E5E00DB6ED8 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -111,16 +165,39 @@
 			projectRoot = "";
 			targets = (
 				F981327B2BF74E1900DB6ED8 /* traycli */,
+				F98132892BF74E5E00DB6ED8 /* ServiceHelper */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F98132882BF74E5E00DB6ED8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F98132782BF74E1900DB6ED8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F981329C2BF74FCF00DB6ED8 /* ServiceHelperProtocol.swift in Sources */,
 				F98132802BF74E1900DB6ED8 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F98132862BF74E5E00DB6ED8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F981328D2BF74E5E00DB6ED8 /* ServiceHelper.swift in Sources */,
+				F981328F2BF74E5E00DB6ED8 /* ServiceHelperProtocol.swift in Sources */,
+				F98132912BF74E5E00DB6ED8 /* main.swift in Sources */,
+				F981329B2BF74F9F00DB6ED8 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +328,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S877FWG93;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/ServiceHelper/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atcults.traycli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -262,7 +341,53 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S877FWG93;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/ServiceHelper/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atcults.traycli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F98132952BF74E5E00DB6ED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ServiceHelper/ServiceHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9S877FWG93;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ServiceHelper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ServiceHelper;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atcults.ServiceHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F98132962BF74E5E00DB6ED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ServiceHelper/ServiceHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9S877FWG93;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ServiceHelper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ServiceHelper;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atcults.ServiceHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -284,6 +409,15 @@
 			buildConfigurations = (
 				F98132842BF74E1900DB6ED8 /* Debug */,
 				F98132852BF74E1900DB6ED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F98132942BF74E5E00DB6ED8 /* Build configuration list for PBXNativeTarget "ServiceHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F98132952BF74E5E00DB6ED8 /* Debug */,
+				F98132962BF74E5E00DB6ED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
